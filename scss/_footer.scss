@@ -1,0 +1,232 @@
+footer {
+    width: 100%;
+    height: auto;
+
+    .partnerBox {
+        width: 100%;
+        height: auto;
+
+        ul {
+            width: 940px;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(6,auto);
+            align-items: center;
+            gap: 20px 0;
+            margin: 0 auto;
+
+            li {
+                margin: 0 auto;
+                
+                &.ab {
+                    width: 100px;
+                    height: 33px;
+                }
+                &.ag {
+                    width: 109px;
+                    height: 36px;
+                }
+                &.atux {
+                    width: 140px;
+                    height: 34px;
+                }
+                &.bng {
+                    width: 102px;
+                    height: 30px;
+                }
+                &.bp {
+                    width: 142px;
+                    height: 29px;
+                }
+                &.dg {
+                    width: 75px;
+                    height: 37px;
+                }
+                &.elk {
+                    width: 96px;
+                    height: 38px;
+                }
+                &.ely {
+                    width: 137px;
+                    height: 30px;
+                }
+                &.evo {
+                    width: 137px;
+                    height: 27px;
+                }
+                &.evoplay {
+                    width: 124px;
+                    height: 20px;
+                }
+                &.ftp {
+                    width: 140px;
+                    height: 32px;
+                }
+                &.gh {
+                    width: 58px;
+                    height: 41px;
+                }
+                &.ifun {
+                    width: 126px;
+                    height: 37px;
+                }
+                &.jili {
+                    width: 73px;
+                    height: 29px;
+                }
+                &.mg {
+                    width: 135px;
+                    height: 33px;
+                }
+                &.net {
+                    width: 92px;
+                    height: 46px;
+                }
+                &.nolimit {
+                    width: 121px;
+                    height: 34px;
+                }
+                &.og {
+                    width: 52px;
+                    height: 45px;
+                }
+                &.pg {
+                    width: 126px;
+                    height: 31px;
+                }
+                &.pls {
+                    width: 173px;
+                    height: 27px;
+                }
+                &.png {
+                    width: 115px;
+                    height: 32px;
+                }
+                &.pp {
+                    width: 95px;
+                    height: 43px;
+                }
+                &.qs {
+                    width: 111px;
+                    height: 27px;
+                }
+                &.redrake {
+                    width: 77px;
+                    height: 48px;
+                }
+                &.relax {
+                    width: 101px;
+                    height: 31px;
+                }
+                &.rsg {
+                    width: 70px;
+                    height: 40px;
+                }
+                &.sa {
+                    width: 103px;
+                    height: 37px;
+                }
+                &.sp {
+                    width: 124px;
+                    height: 37px;
+                }
+                &.sport {
+                    width: 97px;
+                    height: 36px;
+                }
+                &.tpg {
+                    width: 109px;
+                    height: 36px;
+                }
+                &.wm {
+                    width: 40px;
+                    height: 41px;
+                }
+                &.ygg {
+                    width: 133px;
+                    height: 33px;
+                }
+            }
+        }
+    }
+
+    .topBG {
+        width: 940px;
+        height: 41px;
+        margin: 20px auto;
+    }
+
+    .bottomList {
+        width: 100%;
+        height: auto;
+
+        ul {
+            width: 940px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            li {
+                width: auto;
+                height: auto;
+
+                .footerList {
+                    width: 341px;
+                    height: 35px;
+                    margin-bottom: 15px;
+
+                    &.sns {
+                        width: 201px;
+                    }
+                }
+
+                a {
+                    color: $mainColor_1;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &.gc {
+                        width: 201px;
+                        height: 60px;
+                    }
+
+                    i {
+                        width: 45px;
+                        height: 45px;
+                        margin-right: 10px;
+
+                        &.twitter {
+                            background-position-x: 25%;
+                        }
+                        &.youtube {
+                            background-position-x: 50%;
+                        }
+                        &.facebook {
+                            background-position-x: 75%;
+                        }
+                        &.line {
+                            background-position-x: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        color: $mainColor_1;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 30px 0;
+    }
+}

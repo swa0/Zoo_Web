@@ -1,0 +1,53 @@
+html {
+    width: 100%;
+    height: auto;
+    background: #000000;
+
+    body {
+        width: 100%;
+        height: auto;
+
+        @import "./header";
+        @import "./home";
+        @import "./footer";
+        @import "./aside";
+        @import "./jumpWindow";
+        @import "./left";
+        @import "./mainPage";
+        @import "./member";
+        @import "./kyc";
+        @import "./vip";
+        @import "./affiliate";
+        @import "./bank";
+        @import "./history";
+        @import "./bonus";
+        @import "./promotion";
+        @import "./fixed";
+        @import "./inbox";
+        @import "./register";
+        @import "./game";
+        @import "./index";
+        @import "./abousUs";
+        @import "./guide";
+        @import "./deposit_bank";
+        @import "./withdraw";
+        @import "./transfer";
+        @import "./agent";
+
+        main {
+            width: 100%;
+            height: auto;
+            padding-top: 91px;
+        }
+
+        //bg
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+    }
+}

@@ -1,0 +1,262 @@
+.memberBox {
+    width: 100%;
+    height: auto;
+
+    //sercurityBox
+    .sercurityBox {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+
+        .level {
+            color: $subColor_2;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+
+            span {
+
+                &.high {
+                    color: $member_sercurity_highColor;
+                }
+            }
+        }
+
+        .remind {
+            color: $mainColor_1;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .statusBox {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+                padding-left: 10px;
+
+                li {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+
+                    i {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 10px;
+
+                        &.basic {
+                            background-position-x: 25%;
+                        }
+                        &.phone {
+                            background-position-x: 50%;
+                        }
+                        &.card {
+                            background-position-x: 75%;
+                        }
+                        &.mail {
+                            background-position-x: 100%;
+                        }
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold; 
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    //memberInfo_top
+    .memberInfo_top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 25px 0 55px;
+        
+        div {
+            width: 50%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:last-child {
+                justify-content: flex-start;
+            }
+
+            p:not(.remind) {
+                width: 80px;
+                color: $mainColor_1;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: right;
+                margin-right: 5px;
+            }
+
+            label {
+                width: 230px;
+                height: 40px;
+                position: relative;
+
+                &::before {
+                    @include bgStyle_1;
+                    border: solid 1px $mainBorder_2;
+                    border-radius: 5px;
+                    opacity: 0.65;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    color: $mainColor_1;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-left: 10px;
+                }
+
+                .remind {
+                    width: 300px;
+                    color: $subColor_4;
+                    font-size: 12px;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                    bottom: -30px;
+                }
+
+                i {
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //memberInfo_bottom
+    .memberInfo_bottom {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        
+        .halfBox {
+            width: 48%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 0 10px;
+                margin-top: 20px;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &.mar {
+                        margin-bottom: 38px;
+                    }
+
+                    p:not(.remind) {
+                        width: 120px;
+                        color: $mainColor_1;
+                        font-size: 12px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        &.full {
+                            display: block;
+                            width: 100%;
+
+                            a {
+                                display: inline;
+                                color: $subColor_6;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        em {
+                            color: $subColor_5;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    label {
+                        width: 100%;
+                        height: 42px;
+                        border: solid 1px $mainBorder_2;
+                        border-radius: 5px;
+                        position: relative;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.1;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            background: none;
+                            border: none;
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding-left: 10px;
+                        }
+
+                        .remind {
+                            color: $subColor_4;
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-top: 5px;
+                        }
+
+                        i {
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 10px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .qrImg {
+                        width: 125px;
+                        height: 125px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

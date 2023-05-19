@@ -1,0 +1,542 @@
+.promotionBox {
+    width: 100%;
+    height: auto;
+
+    .changeBox {
+        display: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 80px;
+
+        &.display {
+            display: block;
+        }
+
+        .apply {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+
+            .applyBox {
+                width: 100%;
+                height: auto;
+                border: solid 2px $mainBorder_2;
+                border-radius: 5px;
+
+                .title {
+                    width: 100%;
+                    height: 42px;
+                    border-bottom: solid 2px $mainBorder_2;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px;
+
+                    &::before {
+                        @include bgStyle_1;
+                        background: $mainBG_3;
+                        opacity: 0.3;
+                    }
+
+                    .firstWord {
+                        width: 50%;
+                        color: $mainColor_1;
+                        font-size: 16px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                    }
+
+                    .right {
+                        width: 50%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+
+                            span {
+                                margin-left: 20px;
+
+                                em {
+                                    color: $subColor_8;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 89px;
+                            height: 27px;
+
+                            &:hover,&:active,&.active {
+                                background-position-y: 100%;
+
+                                p {
+                                    color: $mainColor_1;
+                                    text-shadow: 2px 2px 0 $textShadow_1;
+                                }
+                            }
+
+                            &.disable {
+                                pointer-events: none;
+
+                                p {
+                                    opacity: 0.5;
+                                }
+                            }
+
+                            p {
+                                color: $mainColor_2;
+                                font-size: 12px;
+                                font-weight: bold;
+                                padding-bottom: 2px;
+                            }
+                        }
+                    }
+                }
+
+                .infoBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    padding: 0 10px;
+
+                    .left {
+                        width: 80%;
+                        height: auto;
+
+                        ul {
+                            width: 100%;
+                            height: auto;
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            gap: 0 20px;
+
+                            li {
+                                width: auto;
+                                height: 36px;
+                                border-bottom: solid 2px $mainBorder_2;
+                                display: flex;
+                                align-items: center;
+
+                                p {
+                                    color: $mainColor_1;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    letter-spacing: 3px;
+                                    display: flex;
+                                    align-items: center;
+
+                                    span {
+                                        width: 150px;
+                                        color: $subColor_6;
+                                        letter-spacing: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .total {
+                        width: 20%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+
+                            span {
+                                display: block;
+                                color: $subColor_6;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .more {
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    border: none;
+                    color: $subColor_6;
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    margin: 30px auto;
+
+                    i {
+                        width: 17px;
+                        height: 15px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+        .withdrawal {
+            width: 100%;
+            height: auto;
+
+            .empty {
+                width: 100%;
+                height: auto;
+                border: solid 2px $mainBorder_2;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 0;
+                margin-top: 20px;
+
+                .emptyImg {
+                    width: 56px;
+                    height: 65px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: $mainColor_1;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .applyRecord {
+            width: 100%;
+            height: auto;
+
+            .searchBox {
+                width: 860px;
+                height: 172px;
+                padding: 25px 50px 0;
+                margin: 20px auto;
+
+                .title {
+                    color: $mainColor_2;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .row {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    &:last-child {
+                        margin-top: 5px;
+                    }
+
+                    .smallTitle {
+                        width: 75px;
+                        color: $mainColor_2;
+                        font-size: 12px;
+                        font-weight: bold;
+                        flex-shrink: 0;
+
+                        &:nth-of-type(2) {
+                            width: auto;
+                            margin: 0 20px;
+                        }
+                    }
+
+                    label {
+                        width: 210px;
+                        height: 40px;
+                        border: solid 1px $mainBorder_2;
+                        border-radius: 5px;
+                        position: relative;
+                        flex-shrink: 0;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.1;
+                            z-index: 1;
+                        }
+
+                        select {
+                            width: 100%;
+                            height: 100%;
+                            background: none;
+                            border: none;
+                            color: $subColor_7;
+                            font-size: 14px;
+                            font-weight: bold;
+                            position: relative;
+                            padding-left: 10px;
+                            z-index: 1;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            background: none;
+                            border: none;
+                            color: $subColor_7;
+                            font-size: 14px;
+                            font-weight: bold;
+                            position: relative;
+                            padding-left: 10px;
+                            z-index: 1;
+                        }
+
+                        .arrow_ic {
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            top: 42%;
+                            transform: translateY(-50%);
+                            right: 20px;
+
+                            &::before {
+                                @include arrowStyle_1;
+                                border-color: $mainBorder_2 $mainBorder_2 transparent transparent;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%,-50%) rotate(135deg);
+                            }
+                        }
+
+                        .date_ic {
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 12px;
+                            cursor: pointer;
+                            z-index: 2;
+                        }
+                    }
+
+                    .remind {
+                        color: $subColor_7;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        margin-left: 20px;
+
+                        button {
+                            width: 58px;
+                            height: 40px;
+                            @include btnStyle_2;
+                            border-radius: 5px;
+                            color: $subColor_7;
+                            font-size: 14px;
+                            margin-left: 10px;
+
+                            &:first-child {
+                                margin: 0;
+                            }
+
+                            &:hover,&:active,&.active {
+                                color: $mainColor_1;
+
+                                &::before {
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .check {
+                        width: 141px;
+                        height: 46px;
+                        color: $mainColor_2;
+                        font-size: 16px;
+                        font-weight: bold;
+                        flex-shrink: 0;
+                        padding-bottom: 4px;
+
+                        &:hover,&:active,&.active {
+                            background-position-y: 100%;
+                        }
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+                height: auto;
+                box-shadow: 0 0 0 2px $mainBorder_2 inset;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    @include bgStyle_1;
+                    background: $mainBG_3;
+                    opacity: 0.3;
+                }
+
+                tr {
+                    border-bottom: solid 2px $mainBorder_2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    th {
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+                        position: relative;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.3;
+                        }
+
+                        &:nth-of-type(1),
+                        &:nth-of-type(3) {
+                            width: 8%;
+                        }
+                        &:nth-of-type(2) {
+                            width: 15%;
+                        }
+                        &:nth-of-type(4),
+                        &:nth-of-type(7),
+                        &:nth-of-type(8) {
+                            width: 12%;
+                        }
+                        &:nth-of-type(5),
+                        &:nth-of-type(9),
+                        &:nth-of-type(10) {
+                            width: 10%;
+                        }
+                        &:nth-of-type(6) {
+                            width: 5%;
+                        }
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+
+                    td {
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pageBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+
+            .left {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+
+                .smallTitle {
+                    color: $mainColor_1;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-right: 20px;
+                }
+
+                ul {
+                    width: auto;
+                    height: auto;
+                    position: relative;
+                    padding: 0 20px;
+
+                    i {
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+
+                        &::before {
+                            @include arrowStyle_1;
+                            top: 50%;
+                            left: 50%;
+                        }
+
+                        &.prev {
+                            left: 0;
+
+                            &::before {
+                                transform: translate(-50%,-50%) rotate(-135deg);
+                            }
+                        }
+
+                        &.next {
+                            right: 0;
+
+                            &::before {
+                                transform: translate(-50%,-50%) rotate(45deg);
+                            }
+                        }
+                    }
+
+                    li {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 3px;
+                        background: $mainBG_3;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

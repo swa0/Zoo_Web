@@ -1,0 +1,253 @@
+.bankBox {
+    width: 100%;
+    height: auto;
+
+    .swiper_cardShowBox {
+        width: 940px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        .swiper-slide {
+            
+            .cardBG {
+                width: 212px;
+                height: 136px;
+                position: relative;
+                padding: 20px 0 0 20px;
+
+                .name {
+                    color: $mainColor_1;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-shadow: 2px 2px 0 $textShadow_1;
+                    letter-spacing: 2px;
+                    margin-bottom: 50px;
+                }
+
+                .numBox {
+                    width: auto;
+                    height: auto;
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-shadow: 2px 2px 0 $textShadow_1;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .empty {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &::before {
+                        @include bgStyle_1;
+                        background: $mainBG_1;
+                        border-radius: 16px;
+                        opacity: 0.65;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-shadow: 2px 2px 0 $textShadow_1;
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 24px;
+            height: 24px;
+            background: $mainBG_2;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+
+            &::after {
+                @include arrowStyle_1;
+                top: 50%;
+                left: 42%;
+                transform: translate(-50%,-50%) rotate(45deg);
+                border-color: $mainBG_1;
+            }
+        }
+        .swiper-button-prev {
+
+            &::after {
+                left: 60%;
+                transform: translate(-50%,-50%) rotate(-135deg);
+            }
+        }
+    }
+
+    .infoBox {
+        width: 670px;
+        height: 592px;
+        padding: 12px 80px 0;
+        margin: 20px auto 80px;
+
+        .title {
+            color: $mainColor_1;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 0 $textShadow_1;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subTitle {
+            color: $mainColor_2;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 18px;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+
+                em {
+                    color: $subColor_5;
+                }
+            }
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &.mar {
+                    margin-bottom: 50px;
+                }
+
+                .smallTitle {
+                    width: 200px;
+                    color: $mainColor_2;
+                    font-size: 14px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+
+                    em{
+                        color: $subColor_5;
+                    }
+                }
+
+                label {
+                    width: 100%;
+                    height: 40px;
+                    border: solid 1px $mainBorder_2;
+                    border-radius: 5px;
+                    position: relative;
+
+                    &::before {
+                        @include bgStyle_1;
+                        background: $mainBG_3;
+                        opacity: 0.1;
+                        z-index: 1;
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 100%;
+                        background: none;
+                        border: none;
+                        color: $subColor_7;
+                        font-size: 14px;
+                        font-weight: bold;
+                        position: relative;
+                        padding-left: 20px;
+                        z-index: 1;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        background: none;
+                        border: none;
+                        color: $subColor_7;
+                        font-size: 14px;
+                        font-weight: bold;
+                        position: relative;
+                        padding-left: 20px;
+                        z-index: 1;
+                    }
+
+                    i {
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 42%;
+                        transform: translateY(-50%);
+                        right: 20px;
+
+                        &::before {
+                            @include arrowStyle_1;
+                            border-color: $mainBorder_2 $mainBorder_2 transparent transparent;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%) rotate(135deg);
+                        }
+                    }
+
+                    p {
+                        color: $subColor_4;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+
+        .btnBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            button {
+                width: 141px;
+                height: 46px;
+                color: $mainColor_2;
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 6px;
+                margin-right: 40px;
+
+                &:hover,&:active,&.active {
+                    background-position-y: 100%;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

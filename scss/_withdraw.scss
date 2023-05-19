@@ -1,0 +1,351 @@
+.withdrawBox {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .topBG {
+            margin-bottom: 20px;
+        }
+
+        .platformBlock {
+            width: 99.8%;
+            height: auto;
+            margin-bottom: 20px;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: $mainBG_1;
+                border: 1px solid $mainBorder_1;
+                border-radius: 8px;
+                opacity: 0.4;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            .outer { 
+                display: none;
+                width: 100%;
+                height: auto;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+                padding: 20px 20px 0;
+                
+                &.active {
+                    display: grid;
+                }
+
+                .platform {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background: $mainBG_2;
+                        border-radius: 5px;
+                        opacity: 0.1;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                    }
+
+                    .name {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $subColor_2;
+                        font-size: 14px;
+                        font-weight: bold;
+                        white-space: nowrap;
+
+                        .refresh {
+                            width: 18px;
+                            height: 18px;
+                            display: inline-block;
+                            margin-left: 10px;
+                            cursor: pointer;
+
+                            &:hover,&.active &:active {
+                                filter: brightness(1.2);
+                            }
+                        }
+                    }
+
+                    .tot {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $mainColor_1;
+                        font-size: 20px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        margin-top: 10px;
+                        @include textHide;
+
+                        .dollar {
+                            color: $mainColor_1;
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .state {
+                width: auto;
+                height: auto;
+                color: $subColor_2;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 2px;
+                margin: 25px 0;
+                position: relative;
+                cursor: pointer;
+
+                &.active {
+
+                    &::before,
+                    &::after {
+                        transform: translateY(-50%) rotate(0deg);
+                    }
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    transition: transform 0.3s;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+
+                &::before {
+                    left: 44.5%;
+                }
+
+                &::after {
+                    right: 45%;
+                }
+            }
+        }
+
+        .withDrawApply {
+            width: 99.5%;
+            height: auto;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: $mainBG_1;
+                border: 1px solid $mainBorder_1;
+                border-radius: 8px;
+                opacity: 0.4;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 35px;
+
+                .half {
+                    width: 40%;
+                    height: auto;
+
+                    &:nth-of-type(2) {
+                        width: 53%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    label {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+
+                        &:nth-of-type(1) {
+
+                            .itemName {
+                                margin: 0 0 5px;
+                            }
+                        }
+
+                        &:not(:nth-of-type(1)){
+                            
+                            .downArrow_ic {
+                                top: 83%;
+                            }
+                        }
+
+                        .itemName {
+                            color: $mainColor_1;
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin: 15px 0 5px;
+
+                            span {
+                                color: $subColor_5;
+                            }
+                        }
+
+                        select,
+                        input {
+                            width: 100%;
+                            height: 50px;
+                            background: transparent;
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-radius: 5px;
+                            border: 2px solid $mainBorder_2;
+                            padding: 0 15px;
+
+                            &::placeholder {
+                                color: $mainColor_1;
+                            }
+                        }
+
+                        select {
+                            color: $subColor_2;
+                        }
+
+                        .downArrow_ic {
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            top: 60%;
+                            right: 15px;
+                        }
+                    }
+
+                    .rule {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        color: $mainColor_1;
+                        font-size: 15px;
+                        font-weight: bold;
+                        line-height: 20px;
+
+                        &:nth-of-type(1) {
+                            margin-top: 13px;
+                        }
+
+                        p {
+                            width: 105px;
+                            white-space: nowrap;
+                        }
+
+                        .colon {
+                            margin: 0 5px;
+                        }
+
+                        .highlight {
+                            color: $subColor_11;
+                            margin-right: 10px;
+                        }
+                        
+                        .smallText {
+                            font-size: 12px;
+                            font-weight: lighter;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    button {
+                        width: 40%;
+                        height: 55px;
+                        color: $mainColor_2;
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding-bottom: 6px;
+                        margin: 0 auto;
+                        background-position-y: 100%;
+
+                        &:hover,&:active,&.active {
+                            background-position-y: 0%;
+                        }
+
+                        &:disabled {
+                            color: $subColor_14;
+                            filter: grayscale(1);
+                            pointer-events: none;
+                        }
+                    }
+
+                    .remindText {
+                        width: 100%;
+                        height: auto;
+                        color: $subColor_4;
+                        margin: 18px 0;
+
+                        p {
+                            font-size: 12px;
+                            font-weight: bold;
+                            letter-spacing: 0.1px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .remindBox {
+        width: 100%;
+        height: auto;
+        
+        .topBG {
+            width: 100%;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        .textArea {
+            width: 100%;
+            height: auto;
+            min-height: 310px;
+            border-radius: 5px;
+            border: 1px solid $mainBorder_2;
+            margin-bottom: 25px;
+        }
+    }
+}

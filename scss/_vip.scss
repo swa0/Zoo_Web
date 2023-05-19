@@ -1,0 +1,285 @@
+.vipBox {
+    width: 100%;
+    height: auto;
+
+    .levelBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin-bottom: 20px;
+
+        .levelBG {
+            width: 511px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+
+            .level {
+                width: 150px;
+                height: 150px;
+                flex-shrink: 0;
+                margin-left: 20px;
+            }
+
+            .textBox {
+                width: 100%;
+                height: auto;
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+
+                    &:first-child {
+                        color: $subColor_7;
+                        margin-bottom: 20px;
+
+                        span {
+                            color: $mainColor_2;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: 160px;
+                    }
+                }
+            }
+        }
+
+        .rowBox {
+            width: 100%;
+            height: auto;
+            padding: 10px 25px;
+
+            .title {
+                color: $mainColor_1;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .row {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .smallTitle {
+                    color: $mainColor_1;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                .bar {
+                    width: 100%;
+                    height: 14px;
+                    background: $mainBG_2;
+                    border: solid 1px $mainBorder_1;
+                    border-radius: 50px;
+                    overflow: hidden;
+
+                    i {
+                        width: 15%;
+                        height: 100%;
+                        background: $row_linearBG;
+                        border-radius: 50px;
+                    }
+                }
+
+                .remind {
+                    color: $mainColor_1;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: right;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .swiper_levelShowBox {
+        width: 940px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        .swiper-slide {
+            padding-top: 50px;
+
+            .showBG {
+                width: 171px;
+                height: 259px;
+                position: relative;
+                padding-top: 85px;
+
+                i {
+                    width: 130px;
+                    height: 130px;
+                    position: absolute;
+                    left: 50%;
+                    top: -50px;
+                    transform: translateX(-50%);
+                }
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    span {
+                        display: block;
+                        color: $subColor_5;
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 24px;
+            height: 24px;
+            background: $mainBG_2;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+
+            &::after {
+                @include arrowStyle_1;
+                top: 50%;
+                left: 42%;
+                transform: translate(-50%,-50%) rotate(45deg);
+                border-color: $mainBG_1;
+            }
+        }
+        .swiper-button-prev {
+
+            &::after {
+                left: 60%;
+                transform: translate(-50%,-50%) rotate(-135deg);
+            }
+        }
+    }
+
+    .infoBox {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+
+        table {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 0 2px $mainBorder_2 inset;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                @include bgStyle_1;
+                background: $mainBG_3;
+                opacity: 0.3;
+            }
+
+            tr {
+                border-bottom: solid 2px $mainBorder_2;
+
+                &:last-child {
+                    border: none;
+                }
+
+                th {
+                    height: 42px;
+                    border-right: solid 2px $mainBorder_2;
+                    vertical-align: middle;
+                    position: relative;
+
+                    &::before {
+                        @include bgStyle_1;
+                        background: $mainBG_3;
+                        opacity: 0.3;
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+
+                td {
+                    height: 42px;
+                    border-right: solid 2px $mainBorder_2;
+                    vertical-align: middle;
+
+                    &:nth-of-type(1) {
+                        width: 20%;
+                    }
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4),
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        width: 16%;
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+
+                    div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 20px;
+
+                        i {
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .precautionBox {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 80px;
+
+        p {
+            color: $mainColor_1;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 18px;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

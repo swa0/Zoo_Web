@@ -1,0 +1,341 @@
+.bonusBox {
+    width: 100%;
+    height: auto;
+
+    .changeBox {
+        display: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 80px;
+
+        &.display {
+            display: block;
+        }
+
+        .searchBox {
+            width: 862px;
+            height: 105px;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+
+            .smallTitle {
+                width: 40px;
+                color: $mainColor_2;
+                font-size: 12px;
+                font-weight: bold;
+                flex-shrink: 0;
+            }
+
+            label {
+                width: 210px;
+                height: 40px;
+                border: solid 1px $mainBorder_2;
+                border-radius: 5px;
+                position: relative;
+                flex-shrink: 0;
+
+                &::before {
+                    @include bgStyle_1;
+                    background: $mainBG_3;
+                    opacity: 0.1;
+                    z-index: 1;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    color: $subColor_7;
+                    font-size: 14px;
+                    font-weight: bold;
+                    position: relative;
+                    padding-left: 10px;
+                    z-index: 1;
+                }
+
+                .date_ic {
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 12px;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+
+                .remind {
+                    color: $subColor_7;
+                    font-size: 12px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    position: absolute;
+                    left: 0;
+                    bottom: -15px;
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                margin-left: 20px;
+
+                button {
+                    width: 58px;
+                    height: 40px;
+                    @include btnStyle_2;
+                    border-radius: 5px;
+                    color: $subColor_7;
+                    font-size: 14px;
+                    margin-left: 10px;
+
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    &:hover,&:active,&.active {
+                        color: $mainColor_1;
+
+                        &::before {
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .check {
+                width: 141px;
+                height: 46px;
+                color: $mainColor_2;
+                font-size: 16px;
+                font-weight: bold;
+                flex-shrink: 0;
+                padding-bottom: 4px;
+
+                &:hover,&:active,&.active {
+                    background-position-y: 100%;
+                }
+            }
+        }
+
+        .partner {
+            width: 100%;
+            height: auto;
+
+            table {
+                width: 100%;
+                height: auto;
+                box-shadow: 0 0 0 2px $mainBorder_2 inset;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    @include bgStyle_1;
+                    background: $mainBG_3;
+                    opacity: 0.3;
+                }
+
+                tr {
+                    border-bottom: solid 2px $mainBorder_2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    th {
+                        width: 25%;
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+                        position: relative;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.3;
+                        }
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+
+                    td {
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+
+                            &.open {
+                                color: $subColor_6;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .bonusRecord {
+            width: 100%;
+            height: auto;
+
+            table {
+                width: 100%;
+                height: auto;
+                box-shadow: 0 0 0 2px $mainBorder_2 inset;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    @include bgStyle_1;
+                    background: $mainBG_3;
+                    opacity: 0.3;
+                }
+
+                tr {
+                    border-bottom: solid 2px $mainBorder_2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    th {
+                        width: 25%;
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+                        position: relative;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.3;
+                        }
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+
+                    td {
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .feeback {
+            width: 100%;
+            height: auto;
+
+            table {
+                width: 100%;
+                height: auto;
+                box-shadow: 0 0 0 2px $mainBorder_2 inset;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    @include bgStyle_1;
+                    background: $mainBG_3;
+                    opacity: 0.3;
+                }
+
+                tr {
+                    border-bottom: solid 2px $mainBorder_2;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    th {
+                        width: 50%;
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+                        position: relative;
+
+                        &::before {
+                            @include bgStyle_1;
+                            background: $mainBG_3;
+                            opacity: 0.3;
+                        }
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+
+                    td {
+                        height: 42px;
+                        border-right: solid 2px $mainBorder_2;
+                        vertical-align: middle;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        p {
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
