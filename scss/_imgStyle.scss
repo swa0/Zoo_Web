@@ -287,6 +287,14 @@ header .money_ic {
     background: url('../images/qrImg.png') no-repeat center;
     background-size: contain;
 }
+.mainPage .memberBox button.submit_Btn { //+ 20230630_S
+    background: url('../images/btn/okBtn.png') no-repeat center;
+    background-size: contain;
+}
+.mainPage .memberBox button.cancel_Btn { //+ 20230630_S
+    background: url('../images/btn/cancelBtn.png') no-repeat center;
+    background-size: contain;
+}
 
 //kyc
 .mainPage .kycBox .certifiedImg {

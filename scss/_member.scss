@@ -257,6 +257,56 @@
                     }
                 }
             }
+
+             &:first-child { //+ 20230630_S
+
+                ul {
+
+                    li {
+
+                        &:not(:first-child) {
+                            
+                            label {
+
+                               .edit_ic {
+
+                                &.editMode {
+                                    display: none;
+                                }
+                               }
+                            }
+
+                            .editCheck_Box {
+                                width: auto;
+                                height: auto;
+                                display: none;
+                                flex-shrink: 0;
+                                align-items: center;
+                                justify-content: center;
+
+                                &.display {
+                                    display: flex;
+                                }
+
+                                button {
+                                    margin-left: 10px;
+                                    
+                                    &.submit_Btn {
+                                        width: 39px;
+                                        height: 25px;
+                                    }
+
+                                    &.cancel_Btn {
+                                        width: 25px;
+                                        height: 25px;
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

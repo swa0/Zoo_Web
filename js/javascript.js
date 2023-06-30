@@ -369,7 +369,7 @@ $(function(){
         .addClass("display");
     })
 
-    $(".memberInfo_bottom ul li:nth-of-type(4) label .edit_ic").on("click",function(){
+    $(".memberInfo_bottom ul li:nth-of-type(3) label .edit_ic").on("click",function(){ //20230630_S
         $(".jumpWindow")
         .removeClass("display");
 
@@ -504,5 +504,27 @@ $(function(){
     $("header .selectBox label button, button.apply").on("click",function(){
         $(".filter, .jumpWindow.agentApplyWindow")
         .addClass("display");
+    })
+})
+
+//member 編輯資料:確認/取消和紐  //+ 20230630_S
+$(function (){
+    $(".mainPage .memberBox li:not(.mobile) i.edit_ic").click(function(){
+        $(this)
+        .toggleClass("editMode")
+        .closest("li")
+        .find(".editCheck_Box")
+        .addClass("display");
+    })
+
+    $(".mainPage .memberBox .editCheck_Box button").click(function(){
+        $(this)
+        .closest(".editCheck_Box")
+        .removeClass("display");
+
+        $(this)
+        .closest("li")
+        .find("i.edit_ic")
+        .removeClass("editMode");
     })
 })

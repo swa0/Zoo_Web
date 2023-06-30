@@ -349,6 +349,16 @@ header .money_ic {
   background-size: contain;
 }
 
+.mainPage .memberBox button.submit_Btn {
+  background: url("../images/btn/okBtn.png") no-repeat center;
+  background-size: contain;
+}
+
+.mainPage .memberBox button.cancel_Btn {
+  background: url("../images/btn/cancelBtn.png") no-repeat center;
+  background-size: contain;
+}
+
 .mainPage .kycBox .certifiedImg {
   background: url("../images/certifiedImg.png") no-repeat center;
   background-size: contain;
@@ -5042,6 +5052,39 @@ html body .memberBox .memberInfo_bottom .halfBox ul li .qrImg {
   width: 125px;
   height: 125px;
   margin: 0 auto;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) label .edit_ic.editMode {
+  display: none;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) .editCheck_Box {
+  width: auto;
+  height: auto;
+  display: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) .editCheck_Box.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) .editCheck_Box button {
+  margin-left: 10px;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) .editCheck_Box button.submit_Btn {
+  width: 39px;
+  height: 25px;
+}
+html body .memberBox .memberInfo_bottom .halfBox:first-child ul li:not(:first-child) .editCheck_Box button.cancel_Btn {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
 }
 html body .kycBox {
   width: 100%;
